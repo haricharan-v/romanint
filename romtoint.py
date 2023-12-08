@@ -20,8 +20,14 @@ def romanToInt(s: str) -> int:
 
     return integer
 
-# Example usage:
-user_input = input("Enter a Roman numeral: ")
-result = romanToInt(user_input)
-if result is not None:
-    print(f"The integer equivalent of {user_input} is {result}.")
+while True:
+    user_input = input("Enter a Roman numeral: ")
+    result = romanToInt(user_input)
+    if result is not None:
+        print(f"The integer equivalent of {user_input} is {result}.")
+
+    try_again = input("Do you want to try again? (yes/no): ")
+    if try_again.lower() != 'yes':
+        break
+
+    print()  # Add a newline for better formatting
